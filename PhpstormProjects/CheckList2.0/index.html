@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <!--Page Title-->
+    <title>Flight Check</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Operational Task List</title>
+</head>
+<body>
+<center>
+    <!--Page Heading & Project Name-->
+    <h2>Flight Check</h2>
+    <br><br>
+    <label class="col-md-4 control-label" for="projectname">Project Name</label>
+    <div class="col-md-4">
+        <input id="projectname" name="projectname" type="text" placeholder="" class="form-control input-md">
+    </div>
+
+</center>
+<br>
+<br>
+​<!--First Row of dropdown options-->
+<form class="form-inline">
+    <div class="container-fluid">
+        ​<div class="row">
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Tail Number</label>
+                <div class="col-md-4">
+                    <select id="tailno" name="tailno" class="form-control">
+                        <option value="1">S201TA</option>
+                        <option value="2">S211TA</option>
+                        <option value="3">S212TA</option>
+                        <option value="4">S213TA</option>
+                        <option value="5">S201SH</option>
+                    </select>
+                </div>
+            </div>
+            ​
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+            <div class="col-md-4">
+                <input id="fengg" name="fengg" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+            <div class="col-md-4">
+                <input id="fplan" name="fplan" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Sensor</label>
+                <div class="col-md-4">
+                    <select id="sensor" name="sensor" class="form-control">
+                        <option value="1">Canon SX230HS</option>
+                        <option value="2">Canon A220</option>
+                        <option value="3">Sony A S100</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        ​
+        <br>
+        <br>
+        ​<!--Buttons for Nav-->
+        ​<div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='airframe.html'" style="width: 100%" value="D-Day">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href='log_book.html'" style="width: 100%" value="Log-Book">
+        </div>
+    </div>
+                    ​
+    </div>
+</form>
+​
+</body>
+</html>

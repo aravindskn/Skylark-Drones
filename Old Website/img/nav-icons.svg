@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<svg width="200" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <rect id="svg_2" height="2" width="22" fill="#F84644" y="14" x="9"/>
+  </g>
+  <path id="svg_3" d="m33,9l0,22l-26,0l0,-22l26,0m2,-2l-30,0l0,26l30,0l0,-26l0,0z" fill="#464C50"/>
+  <path id="svg_4" d="m57,17l-3,8l8,-3.1l3.099998,-8l-8.099998,3.1z" fill="#F84644"/>
+  <g stroke="null" id="svg_5">
+   <g stroke="null" id="svg_6">
+    <path stroke="null" id="svg_7" d="m152,8l0,17l-20,0l-0.699997,0l-0.5,0.400002l-5.800003,4.5l0,-2.900002l0,-19l27,0m2,-2l-31,0l0,21l0,7l9,-7l22,0l0,-21l0,0z" fill="#464C50"/>
+   </g>
+  </g>
+  <g stroke="null" id="svg_8">
+   <rect stroke="null" id="svg_9" height="2" width="13" fill="#F84644" y="15" x="132"/>
+  </g>
+  <path id="svg_10" d="m110,10l0,21l-26,0l0,-21l26,0m2,-2l-30,0l0,25l30,0l0,-25l0,0z" fill="#464C50"/>
+  <rect id="svg_11" height="4.9" width="3" fill="#464C50" y="5" x="88"/>
+  <rect id="svg_12" height="4.9" width="3" fill="#464C50" y="5" x="103"/>
+  <g id="svg_13">
+   <rect id="svg_14" height="6" width="2" fill="#F84644" y="21" x="173.1"/>
+  </g>
+  <g id="svg_15">
+   <rect id="svg_16" height="9" width="2" fill="#F84644" y="18" x="179"/>
+  </g>
+  <g id="svg_17">
+   <rect id="svg_18" height="12" width="2" fill="#F84644" y="15" x="185.1"/>
+  </g>
+  <path id="svg_19" d="m192.100006,9l0,22l-24,0l0,-22l24,0m2,-2l-28,0l0,26l28,0l0,-26l0,0z" fill="#464C50"/>
+  <circle id="svg_20" r="13.5" cy="19.5" cx="59.5" stroke-miterlimit="10" stroke-width="2" stroke="#464C50" fill="none"/>
+  <polygon id="svg_21" points="104.19999694824219,16.100000381469727 102.80000305175781,14.699999809265137 95,22.5 91.19999694824219,18.700000762939453 89.80000305175781,20.100000381469727 95,25.299999237060547 95,25.299999237060547 95,25.299999237060547 " fill="#F84644"/>
+ </g>
+</svg>

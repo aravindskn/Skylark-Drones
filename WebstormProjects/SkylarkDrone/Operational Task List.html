@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php include_once("config.php");?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Operational Task List</title>
+</head>
+<body>
+<center>
+    <h2>Flight Check</h2>
+    <table>
+        <tr>
+    <label style="font-family: Arial;font-size: 125%">Tail Number:   </label>
+            <input type="text" name="tailno" value="" />
+        </tr>
+    </table>
+</center>
+
+<form class="form-horizontal">
+<table>
+    <div class="input-group">
+    <br>
+    <br>
+    <tr>
+
+            <div class="input-group">
+        <label style="font-family:Arial;font-size:100%;">Date: </label>
+        <input type="date" name="date" style="margin-left: 3.9em;" value="DD/MM/YYYY"/>
+                </div>
+            <div class="input-group">
+        <label style="font-family:Arial;font-size:100%;">Time: </label>
+        <input type="time" name="time" style="margin-left: 3.8em;" value="HH:mm"/>
+                </div>
+        <label style="font-family:Arial;font-size: 100%;">Client: </label>
+        <input type="text" name="client" style="margin-left: 3.3em;" value=""/>
+            <div class="input-group">
+        <label style="font-family:Arial;font-size: 100%;">Trail Number: </label>
+        <input type="text" name="trail" value=""/>
+                </div>
+        </div>
+    </tr>
+    </div>
+    <tr>
+        <div class="input-group">
+
+
+        <br>
+
+            <label style="font-family: Arial;font-size: 100%;">Airframe: </label>
+            <input type="text" name="airframe" style="margin-left: 2.2em;" value=" "/><br>
+
+
+        </div>
+    </tr>
+    <div class="input-group">
+    <br>
+    <tr>
+
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Location: </label>
+        <input type="text" style="height: 100px;width: 300px; margin-left: 3.5em; " name="location" value=" "/>
+                </div>
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Operator Names: </label>
+        <input type="text" style="height: 100px;width: 300px;" name="operator" value=" "/>
+                </div>
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Camera Details: </label>
+        <input type="text" style="height: 100px; width: 300px;margin-left: 0.5em;" name="camera" value=" "/>
+                </div>
+
+    </tr>
+        </div>
+    <div class="input-group">
+    <br>
+    <br>
+    <tr>
+
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Wind Speed: </label>
+        <input type="text" name="windspeed" value=" "/>
+                </div>
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Luminous: </label>
+        <input type="text" style="margin-left: 1em;" name="luminous" value=" "/>
+                </div>
+            <div class="input-group">
+        <label style="font-family: Arial;font-size:100%;">Climate: </label>
+        <input type="text" style="margin-left: 2.3em;" name="climate" value=" "/>
+                </div>
+
+    </tr>
+    </div>
+</table>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Pre-Flight Parameters</legend>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="phydam">Physical Damage In Structure</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="phydam" name="phydam" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="servochk">Servo Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="servochk" name="servochk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="propellerchk">Propeller Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="propellerchk" name="propellerchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="motorchk">Motor Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="motorchk" name="motorchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batteryV">Battery Voltage</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="batteryV" name="batteryV" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="lapbatbackup">Laptop Battery Backup</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="lapbatbackup" name="lapbatbackup" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="acccalib">Accelerometer Calibration</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="acccalib" name="acccalib" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="airspdcalib">Airspeed Calibration</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="airspdcalib" name="airspdcalib" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="compasscalib">Compass Calibration</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="compasscalib" name="compasscalib" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ismap">Is Map Loaded </label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="ismap" name="ismap" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="manualcont">Manual Control Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="manualcont" name="manualcont" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="autocont">Auto Control Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="autocont" name="autocont" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="modchk">Mode Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="modchk" name="modchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batmah">Battery mAh</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="batmah" name="batmah" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Payload Parameters</legend>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camphychk">Camera Physical Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="camphychk" name="camphychk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camsetchk">Camera Setting Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="camsetchk" name="camsetchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="memcardchk">Memory Card Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="memcardchk" name="memcardchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="trigchk">Trigger Check</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="trigchk" name="trigchk" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="iso">ISO</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="iso" name="iso" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="aperture">Aperture</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="aperture" name="aperture" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="expo">Exposure</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="expo" name="expo" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="gsd">GSD</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="gsd" name="gsd" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camorient">Camera Orientation</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="camorient" name="camorient" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Flight Time</legend>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="launchtime">Launch Time</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="launchtime" name="launchtime" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="landtime">Landing Time</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="landtime" name="landtime" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="totalflight">Total Flight Endurance</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="totalflight" name="totalflight" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Prepended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="finalrem">Final Remarks</label>
+            <div class="col-md-4">
+                <div class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                    <input id="finalrem" name="finalrem" class="form-control" type="text" placeholder="" required="">
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Mission Data</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="homecoord">Home Co-ordinate</label>
+            <div class="col-md-4">
+                <input id="homecoord" name="homecoord" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="misstype">Mission Type</label>
+            <div class="col-md-4">
+                <input id="misstype" name="misstype" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="missarea">Mission Area</label>
+            <div class="col-md-4">
+                <input id="missarea" name="missarea" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="optalt">Mission Operation Altitude</label>
+            <div class="col-md-4">
+                <input id="optalt" name="optalt" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="totflight">Total Flight Distance</label>
+            <div class="col-md-4">
+                <input id="totflight" name="totflight" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="reldist">Relative Distance</label>
+            <div class="col-md-4">
+                <input id="reldist" name="reldist" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>After Flight Check</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="airfphydam">Airframe Physical Damage</label>
+            <div class="col-md-4">
+                <input id="airfphydam" name="airfphydam" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="geotagimg">Geotagged Images</label>
+            <div class="col-md-4">
+                <input id="geotagimg" name="geotagimg" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="initrep">Inital Report</label>
+            <div class="col-md-4">
+                <input id="initrep" name="initrep" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batvolt">Battery Voltage</label>
+            <div class="col-md-4">
+                <input id="batvolt" name="batvolt" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Number of Photos</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="estphoto">Estimated </label>
+            <div class="col-md-4">
+                <input id="estphoto" name="estphoto" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="obtphoto">Obtained</label>
+            <div class="col-md-4">
+                <input id="obtphoto" name="obtphoto" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>BIN File Name</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="bin">BIN File</label>
+            <div class="col-md-4">
+                <input id="bin" name="bin" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Images & BIN File Location</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="imgloc">Image File Location and Folder Name in HDD</label>
+            <div class="col-md-4">
+                <input id="imgloc" name="imgloc" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="binloc">Bin File Location and Folder Name in HDD</label>
+            <div class="col-md-4">
+                <input id="binloc" name="binloc" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Flight Image</legend>
+
+        <!-- File Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="flightpic">Upload Flight Image</label>
+            <div class="col-md-4">
+                <input id="flightpic" name="flightpic" class="input-file" type="file">
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
+
+<!-- Button (Double) -->
+<div class="form-group">
+
+    <label class="col-md-4 control-label" for="submit"></label>
+    <div class="col-md-8">
+        <button id="submit" name="submitbutton" class="btn btn-success">Submit</button>
+        <button id="reset" name="resetbutton" class="btn btn-danger">Reset</button>
+    </div>
+
+</div>
+
+</body>
+</html>

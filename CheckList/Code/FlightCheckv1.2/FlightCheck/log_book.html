@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <title>Log Book</title>
+</head>
+
+<body onload="duh()">
+<center>
+    <h2>Log Book</h2>
+</center>
+
+
+<form class="form-horizontal" onsubmit="return checkForm(this);">
+
+        <center>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="col-md-4 control-label" for="pname">Project Name:</label>
+                    <div class="col-md-4">
+                        <input id="pname" name="pname" required type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 control-label" for="sensor">Sensor:</label>
+                    <div class="col-md-4">
+                        <input id="sensor" name="sensor" required type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label" for="tailno">Tail Number:</label>
+                    <div class="col-md-4">
+                        <input id="tailno" name="tailno" required type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+                    <div class="col-md-4">
+                        <input id="fengg" name="fengg" required type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+                    <div class="col-md-4">
+                        <input id="fplan" name="fplan" required type="text" placeholder="" class="form-control input-md">
+                    </div>
+                </div>
+
+            </div>
+
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+            <label class="col-md-4 control-label" for="date">Date:</label>
+            <div class="col-md-4">
+                <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+                <script>
+                    var d = new Date();
+                    document.getElementById("date").value = d.toDateString();
+                </script>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" for="time">Time:</label>
+            <div class="col-md-4">
+                <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+                <script >
+                    var d = new Date(); // for now
+                    document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+                </script>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="climate">Climate:</label>
+            <div class="col-md-4">
+                <input id="climate" name="climate" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="luminous">Luminous:</label>
+            <div class="col-md-4">
+                <input id="luminous" name="luminous" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="windspd">Windspeed:</label>
+            <div class="col-md-4">
+                <input id="windspd" name="windspd" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <center>
+        <legend>Pre-Flight Parameters</legend>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="phydamchk">Physical Damage in Structure</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="phydamchk1">
+                    <input type="radio" required name="phydamchk1" id="phydamchk1" value="1">
+                    OK
+                </label>
+                <input id="phydamchk" name="phydamchk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="servochk">Servo Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="servochk1">
+                    <input type="radio" required name="servochk1" id="servochk1" value="1">
+                    OK
+                </label>
+
+                <input id="servochk" name="servochk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="propellerchk">Propeller Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="propellerchk1">
+                    <input type="radio" required name="propellerchk1" id="propellerchk1" value="1">
+                    OK
+                </label>
+
+                <input id="propellerchk" name="propellerchk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="motorchk">Motor Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="motorchk1">
+                    <input type="radio" required name="motorchk1" id="motorchk1" value="1">
+                    OK
+                </label>
+
+                <input id="motorchk" name="motorchk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batV">Battery Voltage</label>
+            <div class="col-md-4">
+                <input id="batV" name="batV" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batteryopts">Battery Label</label>
+            <div class="col-md-4">
+                <input id="generate" type="button" class="btn btn-danger" value="generate options" onclick="populateDropdown()">
+
+                <select class="btn btn-primary" id="batteryopts">
+                    <option value="default">select one battery</option>
+                </select>
+
+            </div>
+        </div>
+
+        <!--
+        <div class="form-group">
+           <label class="col-md-4 control-label">12000Mah Battery Options</label>
+           <div id="batteries" class="col-md-4">
+               <input type="button" class="btn btn-danger" value="generate options" onclick="generator()">
+           </div>
+       </div>
+        -->
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camphychk">Camera Physical Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="camphychk1">
+                    <input type="radio" required name="camphychk1" id="camphychk1" value="1">
+                    OK
+                </label>
+
+                <input id="camphychk" name="camphychk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camsetchk">Camera Setting Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="camsetchk1">
+                    <input type="radio" required name="camsetchk1" id="camsetchk1" value="1">
+                    OK
+                </label>
+                <input id="camsetchk" name="camsetchk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="memcardchk">Memory Card Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="memcardchk1">
+                    <input type="radio" required name="memcardchk1" id="memcardchk1" value="1">
+                    OK
+                </label>
+                <input id="memcardchk" name="memcardchk" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="iso">ISO</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="iso" required name="iso" class="form-control check40" type="text" placeholder="Qty">
+	        <span class="input-group-addon">
+          <input type="checkbox" class="check40">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(".check40").on("keyup", function(e){
+                if(this.value!=""){
+                    $(".check40").prop("checked", "checked");
+                }else{
+                    $(".check40 ").prop('checked', "");
+                }
+            });
+        </script>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="aperture">Aperture</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="aperture" required name="aperture" class="form-control check41" type="text" placeholder="Qty">
+	        <span class="input-group-addon">
+          <input type="checkbox" class="check41">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(".check41").on("keyup", function(e){
+                if(this.value!=""){
+                    $(".check41").prop("checked", "checked");
+                }else{
+                    $(".check41 ").prop('checked', "");
+                }
+            });
+        </script>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="expo">Exposure Time</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="expo" name="expo" required class="form-control check42" type="text" placeholder="Qty">
+	        <span class="input-group-addon">
+          <input type="checkbox" class="check42">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(".check42").on("keyup", function(e){
+                if(this.value!=""){
+                    $(".check42").prop("checked", "checked");
+                }else{
+                    $(".check42 ").prop('checked', "");
+                }
+            });
+        </script>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camorient">Camera Orientation</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="camorient1">
+                    <input type="radio" required name="camorient1" id="camorient1" value="1">
+                    OK
+                </label>
+                <input id="camorient" name="camorient" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cg">CG</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="cg1">
+                    <input type="radio" required name="cg1" id="cg1" value="1">
+                    OK
+                </label>
+                <input id="cg" name="cg" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="lapbatbak">Laptop Battery Backup</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="lapbatbak1">
+                    <input type="radio" required name="lapbatbak1" id="lapbatbak1" value="1">
+                    OK
+                </label>
+                <input id="lapbatbak" name="lapbatbak" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="mav">Transmitter ON</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="trans1">
+                    <input type="radio" required name="trans1" id="trans1" value="1">
+                    OK
+                </label>
+                <input id="trans" name="trans" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="mav">MAVLink Connection</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="mav1">
+                    <input type="radio" required name="mav1" id="mav1" value="1">
+                    OK
+                </label>
+                <input id="mav" name="mav" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="mod">Mode Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="mod1">
+                    <input type="radio" required name="mod1" id="mod1" value="1">
+                    OK
+                </label>
+                <input id="mod" name="mod" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="arm">Arm</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="arm1">
+                    <input type="radio" required name="arm1" id="arm1" value="1">
+                    OK
+                </label>
+                <input id="arm" name="arm" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="servotemp">Servo Temp</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="servotemp1">
+                    <input type="radio" required name="servotemp1" id="servotemp1" value="1">
+                    OK
+                </label>
+                <input id="servotemp" name="servotemp" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="airspdcalib">Air Speed Calibration</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="airspdcalib1">
+                    <input type="radio" required name="airspdcalib1" id="airspdcalib1" value="1">
+                    OK
+                </label>
+                <input id="airspdcalib" name="airspdcalib" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="mancont">Manual Control Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="mancont1">
+                    <input type="radio" required name="mancont1" id="mancont1" value="1">
+                    OK
+                </label>
+                <input id="mancont" name="mancont" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="autocont">Auto Control Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="autocont1">
+                    <input type="radio" required name="autocont1" id="autocont1" value="1">
+                    OK
+                </label>
+                <input id="autocont" name="autocont" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <legend>Mission Data</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="opalt">Opertational Altitude</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="opalt" required name="opalt" class="form-control check43" type="text" placeholder="Qty">
+	        <span class="input-group-addon">
+          <input type="checkbox" class="check43">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(".check43").on("keyup", function(e){
+                if(this.value!=""){
+                    $(".check43").prop("checked", "checked");
+                }else{
+                    $(".check43 ").prop('checked', "");
+                }
+            });
+        </script>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="relalt">Relative Altitude</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="relalt1">
+                    <input type="radio" required name="relalt1" id="relalt1" value="1">
+                    OK
+                </label>
+                <input id="relalt" name="relalt" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="up">Upload Mission</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="up1">
+                    <input type="radio" required name="up1" id="up1" value="1">
+                    OK
+                </label>
+                <input id="up" name="up" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <legend>Payload Parameters</legend>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="trig">Trigger Check</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="trig1">
+                    <input type="radio" required name="trig1" id="trig1" value="1">
+                    OK
+                </label>
+                <input id="trig" name="trig" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="gsd">GSD</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="gsd1">
+                    <input type="radio" required name="gsd1" id="gsd1" value="1">
+                    OK
+                </label>
+                <input id="gsd" name="gsd" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <legend>Flight Time</legend>
+
+        <script>
+            var time1;
+            var time12;
+            var time2;
+            var time22;
+        </script>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="launchtime">Launch Time</label>
+            <div class="col-md-4">
+                <input id="launchtime" name="launchtime" type="text" placeholder="HH:MM:SS" class="form-control input-md">
+                <button type="button" onclick="myFunction();">Start Time</button>
+                <script>
+                    function myFunction()
+                    {
+                        var d = new Date(); // for now
+                        time1 = d.getHours()+":"+d.getMinutes();
+                        document.getElementById("launchtime").value = time1;
+                        //time12=d.getMilliseconds(time1);
+                    }
+
+                </script>
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="landtime">Landing Time</label>
+            <div class="col-md-4">
+                <input id="landtime" name="landtime" type="text" placeholder="HH:MM:SS" class="form-control input-md">
+                <button type="button" onclick="myFunction1();">Stop Time</button>
+                <script>
+                    function myFunction1()
+                    {
+                        var e = new Date(); // for now
+                        time2 = e.getHours()+":"+e.getMinutes();
+                        document.getElementById("landtime").value = time2;
+                        //time22=e.getMilliseconds(time2);
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="tottime">Total Endurance Time</label>
+            <div class="col-md-4">
+                <input id="tottime" name="tottime" type="text" placeholder="HH:MM:SS" class="form-control input-md">
+                <button type="button" onclick="myFunction2(time1,time2)">Calculate Time</button>
+                <script>
+                    function myFunction2(time1,time2)
+                    {
+
+                        var valuestart = time1;
+                        var valuestop = time2;
+
+                        //create date format
+
+                        var timeStartHours = new Date("01/01/2007 " + valuestop).getHours() - new Date("01/01/2007 " + valuestart).getHours();
+
+                        var timeEndMinutes =  new Date("01/01/2007 " + valuestop).getMinutes() - new Date("01/01/2007 " + valuestart).getMinutes();
+
+
+                        var diff= timeStartHours + "hrs " + timeEndMinutes + " mins";
+                        console.log(diff);
+                        console.log(timeStartHours);
+                        console.log(timeEndMinutes);
+                        document.getElementById("tottime").value = diff;
+                    }
+
+                </script>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="finalrem">Final Remarks</label>
+            <div class="col-md-4">
+                <input id="finalrem" name="finalrem" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <legend>After Flight Check</legend>
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="airphydam">Airframe Physical Damage</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="airphydam1">
+                    <input type="radio" required name="airphydam1" id="airphydam1" value="1">
+                    OK
+                </label>
+                <input id="airphydam" name="airphydam" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="renameimg">Rename Image Files</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="renameimg1">
+                    <input type="radio" required name="renameimg1" id="renameimg1" value="1">
+                    OK
+                </label>
+                <input id="renameimg" name="renameimg" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="geotagimg">Geotagged Images</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="geotagimg1">
+                    <input type="radio" required name="geotagimg1" id="geotagimg1" value="1">
+                    OK
+                </label>
+                <input id="geotagimg" name="geotagimg" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="kml">Check KML with G-Earth</label>
+            <div class="col-md-4">
+                <label class="radio-inline" for="kml1">
+                    <input type="radio" required name="kml1" id="kml1" value="1">
+                    OK
+                </label>
+                <input id="kml" name="kml" type="text" placeholder="remarks" class="form-control input-md">
+            </div>
+        </div>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batvolt">Battery Voltage</label>
+            <div class="col-md-4">
+                <input id="batvolt" required name="batvolt" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <legend>No of Photos</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="estphoto">Estimated </label>
+            <div class="col-md-4">
+                <input id="estphoto" name="estphoto" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="obtphoto">Obtained</label>
+            <div class="col-md-4">
+                <input id="obtphoto" name="obtphoto" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Form Name -->
+        <legend>Images & BIN File Location</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="imgloc">Image File Location and Folder Name in HDD</label>
+            <div class="col-md-4">
+                <input id="imgloc" name="imgloc" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="binloc">Bin File Location and Folder Name in HDD</label>
+            <div class="col-md-4">
+                <input id="binloc" name="binloc" type="text" readonly placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="bin">BIN File</label>
+            <div class="col-md-4">
+                <input id="bin" name="bin" type="text" placeholder="" class="form-control input-md" required="">
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+
+            <div class="col-md-18">
+                <input type="submit" id="submit" name="submit" class="btn btn-primary" onclick="window.print()"
+                       value="Submit">
+            </div>
+
+        </div>
+
+
+
+
+    </center>
+</center>
+
+</form>
+<script>
+    function duh() {
+        document.getElementById("pname").value = localStorage.getItem("projname");
+        document.getElementById("tailno").value = localStorage.getItem("tailno");
+        document.getElementById("fengg").value = localStorage.getItem("fe");
+        document.getElementById("fplan").value = localStorage.getItem("fp");
+        document.getElementById("sensor").value = localStorage.getItem("sensor");
+        document.getElementById("windspd").value = localStorage.getItem("120000");
+
+    }
+</script>
+<script>
+    function populateDropdown(){
+        document.getElementById("generate").onclick = function() {
+            //disable
+            this.disabled = true;
+
+            //do some validation stuff
+        }
+        var select = document.getElementById("batteryopts");
+
+        if (localStorage.getItem("120000checked")=="true") {
+            var toAdd = localStorage.getItem("120000");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120001checked")=="true") {
+            var toAdd = localStorage.getItem("120001");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120002checked")=="true") {
+            var toAdd = localStorage.getItem("120002");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120003checked")=="true") {
+            var toAdd = localStorage.getItem("120003");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120004checked")=="true") {
+            var toAdd = localStorage.getItem("120004");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120005checked")=="true") {
+            var toAdd = localStorage.getItem("120005");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120006checked")=="true") {
+            var toAdd = localStorage.getItem("120006");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120007checked")=="true") {
+            var toAdd = localStorage.getItem("120007");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+        if (localStorage.getItem("120008checked")=="true    ") {
+            var toAdd = localStorage.getItem("120008");
+            select.add(new Option(toAdd));
+            console.log(toAdd);
+        }
+    }
+</script>
+
+<script>
+    document.getElementById("idOfButton").onclick = function() {
+        //disable
+        this.disabled = true;
+
+        //do some validation stuff
+    }
+</script>
+
+</body>
+</html>

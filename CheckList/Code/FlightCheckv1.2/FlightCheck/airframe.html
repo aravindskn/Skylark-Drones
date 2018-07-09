@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Airframe</title>
+</head>
+
+<body onload="duh()">
+<header>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='index.html'" style="width: 100%" value="Home">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href='log_book.html'" style="width: 100%" value="Log-Book">
+        </div>
+    </div>
+</header>
+
+<form class="form-horizontal" action="toolkit.html" onsubmit="return checkForm(this);">
+  <center>
+    <br>
+    <br>
+    <br>
+      <div class="row">
+          <div class="col-md-8">
+              <label class="col-md-4 control-label" for="pname">Project Name:</label>
+              <div class="col-md-4">
+                  <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md">
+              </div>
+          </div>
+          <div class="col-md-4">
+              <label class="col-md-4 control-label" for="sensor">Sensor:</label>
+              <div class="col-md-4">
+                  <input id="sensor" name="sensor" type="text" placeholder="" class="form-control input-md">
+              </div>
+          </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+          <div class="col-md-4">
+              <label class="col-md-4 control-label" for="tailno">Tail Number:</label>
+              <div class="col-md-4">
+                  <input id="tailno" name="tailno" type="text" placeholder="" class="form-control input-md">
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+              <div class="col-md-4">
+                  <input id="fengg" name="fengg" type="text" placeholder="" class="form-control input-md">
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+              <div class="col-md-4">
+                  <input id="fplan" name="fplan" type="text" placeholder="" class="form-control input-md">
+              </div>
+          </div>
+
+      </div>
+    <br>
+    <br>
+    <br>
+
+
+
+    <h2>Airframe CheckList</h2>
+
+
+  </center>
+
+  <br>
+  <br>
+
+  <div class="row">
+      <div class="col-md-6">
+          <label class="col-md-4 control-label" for="date">Date:</label>
+          <div class="col-md-4">
+              <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+              <script>
+                  var d = new Date();
+                  document.getElementById("date").value = d.toDateString();
+              </script>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <label class="col-md-4 control-label" for="time">Time:</label>
+          <div class="col-md-4">
+              <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+              <script >
+                  var d = new Date(); // for now
+                  document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+              </script>
+          </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center>
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="wing">Wing(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="wing" id="wing" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="tails">Tail(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="tails" id="tails" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="tailp">Tail Pin</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="tailp" id="tailp" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="dome">Dome</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="dome" id="dome" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="fuselage">Fuselage</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="fuselage" id="fuselage" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="winge">Wing Extension(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="winge" id="winge" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="carbon">Carbon Rod(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="carbon" id="carbon" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="fuselagest">Fuselage Stand</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="fuselagest" id="fuselagest" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="gear">Landing Gear(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="gear" id="gear" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="ftdi">FTDI Cables</label>
+          <div class="col-md-4">
+
+              <input type="checkbox" name="ftdi" id="ftdi" value="1" required="">
+
+          </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="taranis">Taranis</label>
+          <div class="col-md-4">
+              <select id="taranis" name="taranis" class="form-control">
+                  <option value="1">TR01</option>
+                  <option value="2">TR02</option>
+              </select>
+          </div>
+      </div>
+
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="taranisb">Taranis Battery</label>
+          <div class="col-md-4">
+              <select id="taranisb" name="taranisb" class="form-control">
+                  <option value="1">LF01TX</option>
+                  <option value="2">LF02TX</option>
+                  <option value="3">LF03TX</option>
+                  <option value="4">NC01TX</option>
+              </select>
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="120000">12000Mah Battery</label>
+          <div class="col-md-4">
+              <label class="checkbox-inline" for="120000">
+                  <input type="checkbox" name="120000" id="120000" value="LP01TA">
+                  LP01TA
+              </label>
+              <label class="checkbox-inline" for="120001">
+                  <input type="checkbox" name="120001" id="120001" value="LP02TA">
+                  LP02TA
+              </label>
+              <label class="checkbox-inline" for="120002">
+                  <input type="checkbox" name="120002" id="120002" value="LP03TA">
+                  LP03TA
+              </label>
+              <label class="checkbox-inline" for="120003">
+                  <input type="checkbox" name="120003" id="120003" value="LP04TA">
+                  LP04TA
+              </label>
+              <label class="checkbox-inline" for="120004">
+                  <input type="checkbox" name="120004" id="120004" value="LP05TA">
+                  LP05TA
+              </label>
+              <label class="checkbox-inline" for="120005">
+                  <input type="checkbox" name="120005" id="120005" value="LP06TA">
+                  LP06TA
+              </label>
+              <label class="checkbox-inline" for="120006">
+                  <input type="checkbox" name="120006" id="120006" value="LP07TA">
+                  LP07TA
+              </label>
+              <label class="checkbox-inline" for="120007">
+                  <input type="checkbox" name="120007" id="120007" value="LP08TA">
+                  LP08TA
+              </label>
+              <label class="checkbox-inline" for="120008">
+                  <input type="checkbox" name="120008" id="120008" value="LP09TA">
+                  LP09TA
+              </label>
+          </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="airrfd">Air RFD</label>
+          <div class="col-md-4">
+              <select id="airrfd" name="airrfd" class="form-control">
+                  <option value="1">RDA901</option>
+                  <option value="2">RDA801</option>
+                  <option value="3">RDA802</option>
+              </select>
+          </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="grfd">Ground RFD</label>
+          <div class="col-md-4">
+              <select id="grfd" name="grfd" class="form-control">
+                  <option value="1">RDG901</option>
+                  <option value="2">RDG801</option>
+
+              </select>
+          </div>
+      </div>
+
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <!-- Button -->
+      <div class="form-group">
+
+          <div class="col-md-18">
+              <input type="submit" class="btn btn-primary" onclick="help(), window.print()"
+                     style="width: 100%" value="Submit">
+              <!--, location.href='toolkit.html'-->
+          </div>
+
+  </div>
+  </center>
+
+</form>
+<script>
+    function duh() {
+        document.getElementById("pname").value = localStorage.getItem("projname");
+        document.getElementById("tailno").value = localStorage.getItem("tailno");
+        document.getElementById("fengg").value = localStorage.getItem("fe");
+        document.getElementById("fplan").value = localStorage.getItem("fp");
+        document.getElementById("sensor").value = localStorage.getItem("sensor");
+
+    }
+</script>
+<script>
+    function help(){
+        if(document.getElementById("120000").checked == true){
+            localStorage.setItem("120000checked", "true");
+            console.log("\n");
+            console.log(localStorage.getItem("120000"));
+        }
+
+        if(document.getElementById("120001").checked == true){
+            localStorage.setItem("120001checked", "true");
+            console.log("\n");
+            console.log(localStorage.getItem("120001"));
+        }
+
+        if(document.getElementById("120002").checked == true){
+            localStorage.setItem("120002checked", "true");
+            console.log("\n");
+            console.log(localStorage.getItem("120002"));
+        }
+
+        if(document.getElementById("120003").checked == true){
+            localStorage.setItem("120003checked", "true");
+            console.log("\n");
+            console.log(localStorage.getItem("120003"));
+        }
+
+        if(document.getElementById("120004").checked == true){
+            localStorage.setItem("120004checked", "true");
+        }
+
+        if(document.getElementById("120005").checked == true){
+            localStorage.setItem("120005checked", "true");
+        }
+
+        if(document.getElementById("120006").checked == true){
+            localStorage.setItem("120006checked", "true");
+        }
+
+        if(document.getElementById("120007").checked == true){
+            localStorage.setItem("120007checked", "true");
+        }
+
+        if(document.getElementById("120008").checked == true){
+            localStorage.setItem("120008checked", "true");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D-day Checklist</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+</head>
+<body>
+<center>
+    <h2>D-day Checklist</h2>
+    <hr>
+</center>
+<header>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='index.html'" style="width: 100%" value="Home">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href='log_book.html'" style="width: 100%" value="Log-Book">
+        </div>
+    </div>
+</header>
+<form class="form form-inline">
+    <div class="container-fluid">
+        ​<div class="row">
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Tail Number</label>
+                <div class="col-md-4">
+                    <input name="tailno" value="1" readonly class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Flight Engg.</label>
+                <div class="col-md-4">
+                    <input name="fengg" value="Asgar" readonly class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Flight Planner</label>
+                <div class="col-md-4">
+                    <input name="fp" value="Vaibhav" readonly class="form-control">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Sensor</label>
+                <div class="col-md-4">
+                    <input name="sensor" value="Some_sensor" readonly class="form-control">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" for="date">Date:</label>
+                <div class="col-md-4">
+                    <input id="date" name="date" type="text" placeholder="" class="form-control input-md" readonly>
+                    <script>
+                        var d = new Date();
+                        document.getElementById("date").value = d.toDateString();
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" for="time">Time:</label>
+                <div class="col-md-4">
+                    <input id="time" name="time" type="text" placeholder="" class="form-control input-md" readonly>
+                    <script >
+                        var d = new Date(); // for now
+                        document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+        </div>
+        <br>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary1" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary1" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary1" class="[ btn btn-default active ]">
+                    Airframe CheckList
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary2" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary2" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary2" class="[ btn btn-default active ]">
+                    ToolBox CheckList
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary3" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary3" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary3" class="[ btn btn-default active ]">
+                    Drone Battery Charged
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary4" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary4" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary4" class="[ btn btn-default active ]">
+                    Taranis Battery Charged
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary5" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary5" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary5" class="[ btn btn-default active ]">
+                    Mission Planer WP file (or Polygon file)
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary6" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary6" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary6" class="[ btn btn-default active ]">
+                    Camera Box
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary7" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary7" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary7" class="[ btn btn-default active ]">
+                    Tickets, Contact details & Accommodation
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary8" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary8" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary8" class="[ btn btn-default active ]">
+                    Sunscreen and mosquito repellent
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary9" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary9" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary9" class="[ btn btn-default active ]">
+                    Phanthom 3
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary11" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary11" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary11" class="[ btn btn-default active ]">
+                    Allowances
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary12" autocomplete="off" required=""/>
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary12" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary12" class="[ btn btn-default active ]">
+                    Dongle (3G/4G)
+                </label>
+            </div>
+        </div>
+        <br>
+        <br>
+        <input type="button" class="btn btn-success" id="submit" onclick="location.href='log_book.html';" value="Submit">
+    </div>
+</form>
+<br>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.rawgit.com/MrRio/jsPDF/master/dist/jspdf.min.js"></script>
+<script type="text/javascript" src="//cdn.rawgit.com/niklasvh/html2canvas/0.5.0-alpha2/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

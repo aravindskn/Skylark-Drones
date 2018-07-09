@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta name="description" content="Skylark drones believes in getting drones into the everyday lives of the general public by offering innovative solutions to common problems">
+    <meta name="keywords" content="drones, skylark, skylark drones, banglore, bangalore, bangalore drones, banglore drones, drones, advertising, advertising drones, surveillance,surveillance drones, dronevision, drone vision, drone detection, drones, drone, uav, unmanned aerial vehicles, aerial photography, photography">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Skylark Drones</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/nav_bar.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/cellSpot.css" />
+	<link rel="stylesheet" type="text/css" href="css/content.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+	<link rel="stylesheet" type="text/css" href="css/banner3.css" />
+	<link rel="stylesheet" type="text/css" href="css/effects.css" />
+	<style>
+		#demo {
+			margin: 10px auto;
+			transform-style: preserve-3d;
+			transform: rotateY(50deg) rotateZ(-48deg);
+		}
+		#demo > div {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			position: relative;
+			transform-style: preserve-3d;
+			background-color: #1a7179;
+			-webkit-animation: wave 2s ease-in-out infinite;
+		}
+		@-webkit-keyframes wave {
+			0% {
+				transform: translateZ(0) translate3d(0, 0, 0);
+			}
+			33% {
+				transform: translateZ(100px) translate3d(0, 0, 0);
+			}
+			67% {
+				transform: translateZ(-100px) translate3d(0, 0, 0);
+			}
+			100% {
+				transform: translateZ(0) translate3d(0, 0, 0);
+			}
+		}
+        .hide-text{
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+        }
+        .ease-all{
+            -webkit-transition: all 400ms ease-in-out;
+            -moz-transition: all 400ms ease-in-out;
+            -o-transition: all 400ms ease-in-out;
+            -ms-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out;
+        }
+        .social{
+            height: 10rem;
+            list-style-type: none;
+            margin: 5;
+            padding: 0%;
+            text-align: center;
+            position: fixed;
+            top: 40%;
+            left: -300px;
+            z-index: 100;
+        }
+        .social li a{
+            display: inline-block;
+            margin: 5px;
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            text-align: center;
+            padding-top: 7px;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            -o-border-radius:20px;
+            -ms-border-radius:20px;
+            border-radius:20px;
+            -webkit-box-shadow: inset 0 0 0 40px #222;
+            -moz-box-shadow: inset 0 0 0 40px #222;
+            -o-box-shadow: inset 0 0 0 40px #222;
+            -ms-box-shadow: inset 0 0 0 40px #222;
+            box-shadow: inset 0 0 0 40px #222;
+            color: #fff;
+        }
+        .social li a:hover{
+            -webkit-box-shadow: inset 0 0 0 3px #222;
+            -moz-box-shadow: inset 0 0 0 3px #222;
+            -o-box-shadow: inset 0 0 0 3px #222;
+            -ms-box-shadow: inset 0 0 0 3px #222;
+            box-shadow: inset 0 0 0 3px #222;
+            color: #222;
+        }
+        .person-social{
+            list-style-type: none;
+            margin: 5px;
+            padding: 0%;
+            z-index: 1;
+        }
+        .person-social li{
+            display: inline;
+        }
+        .person-social li a{
+            display: inline-block;
+            margin: 5px;
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            text-align: center;
+            padding-top: 7px;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            -o-border-radius:20px;
+            -ms-border-radius:20px;
+            border-radius:20px;
+            -webkit-box-shadow: inset 0 0 0 40px #888;
+            -moz-box-shadow: inset 0 0 0 40px #888;
+            -o-box-shadow: inset 0 0 0 40px #888;
+            -ms-box-shadow: inset 0 0 0 40px #888;
+            box-shadow: inset 0 0 0 40px #888;
+            color: #fff;
+        }
+        .person-social li a:hover{
+            -webkit-box-shadow: inset 0 0 0 3px #888;
+            -moz-box-shadow: inset 0 0 0 3px #888;
+            -o-box-shadow: inset 0 0 0 3px #888;
+            -ms-box-shadow: inset 0 0 0 3px #888;
+            box-shadow: inset 0 0 0 3px #888;
+            color: #888;
+        }
+
+	</style>
+	<script>
+		window.open = function() {};
+		window.print = function() {};
+		if (false) {
+			window.ontouchstart = function() {};
+		}
+	</script>
+	<script src="js/modernizr.custom.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body id="home">
+    <header class="cd-header" style="z-index: 100 !important;">
+        <div id="cd-logo" style="width: 40px !important; height:4% !important;margin: 10px !important; opacity: 0">
+            <a href="#home">
+                <img src="img/logo1.png" alt="Logo" width="100%" height="100%" style="margin-right: 0px !important">
+            </a>
+        </div>
+    </header>
+    <section id="socialBtn">
+        <ul class="social">
+            <li><a class="ease-all" href="https://www.facebook.com/skylarkdrones" target = "_blank"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a></li>
+            <li><a class="ease-all" href="https://twitter.com/SkylarkDrones" target = "_blank"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a></li>
+            <li><a class="ease-all" href="https://www.youtube.com/channel/UCAhXcG4U2FwKH-Te6B0aBxg" target = "_blank"><i class="fa fa-youtube-play"></i><span class="hide-text">YouTube</span></a></li>
+        </ul>
+    </section>
+	<section id="cd-intro">
+        <canvas id="canvas-intro" width="100%" height="100%"></canvas>
+		<div id="cd-intro-tagline" style="position: absolute !important; top: -50% !important; right: 15%; width: 70%">
+			<img src="img/skylark-logo_transparent-compressor.png" style="display: block"><br>
+			<h1 style="color: black; position: absolute !important; top: 100% !important; right: 15%; width: 100%; font-size: 2.5281em;">
+                LOOK UP FOR THE SOLUTION
+            </h1>
+		</div>
+	</section>
+	<div class="cd-secondary-nav" style="z-index: 99 !important; ">
+		<a class="cd-secondary-nav-trigger">Menu<span></span></a>
+		<nav>
+			<ul>
+				<li style="padding-right: 50px !important; padding-left: 50px !important;">
+					<a href="#home">
+						<b>Home</b>
+						<span></span>
+					</a>
+				</li>
+				<li style="padding-right: 50px !important; padding-left: 50px !important;">
+					<a href="#services">
+						<b>Services</b>
+						<span></span>
+					</a>
+				</li>
+				<li style="padding-right: 50px !important; padding-left: 50px !important;">
+					<a href="#domains">
+						<b>Domains</b>
+						<span></span>
+					</a>
+				</li>
+				<li style="padding-right: 50px !important; padding-left: 50px !important;">
+					<a href="#contact">
+						<b>Contact</b>
+						<span></span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div id="services" style="padding-top: 100px; padding-bottom: 50px;">
+		<div class = "row" style="padding-bottom:30px !important;padding-top:30px !important;">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom: 20px; padding-left: 10px !important;margin: 0px !important;">
+                                <img  src="img/icons/ad2.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                                <center>
+                                    <h1 style = "padding-bottom: 30px; width: 106px; display: inline !important; opacity: 0.7 !important; padding: auto 0px !important;">DroneVertising</h1>
+                                </center>
+                        </div>
+                   </div>
+                </center>
+                <div class="large-5 columns" >
+                    <center>
+                        <img src="img/drone_banner.png" style="padding: 0px !important">
+                        <div style="padding: 0px !important; -webkit-transform: rotateY(164.4deg) rotateZ(0deg); transform: rotateY(0.0deg) rotateZ(90deg); padding-top: 150px">
+                        <div id="containerBanner">
+                          <div id="floorBanner"></div>
+                          <div id="crownBanner"></div>
+                        </div>
+                      </div>
+                    </center>
+                </div>
+                <div class = "large-7 columns" style="padding:30px !important;">
+                    <div class = "row" style="padding-bottom: 20px !important">
+                        <div class="large-12 columns">
+                            <h1 style="padding-bottom: 20px">THE WORLD WILL LOOK UP TO YOUR BRAND</h1>
+                        </div>
+                        <div class="large-12 columns">
+                            <h3>
+                                <b>
+                                    A never before seen dynamic form of advertising is here, to quickly reach an audience with captivating delivery.
+                                    DroneVertising is a revolutionary platform to give your brand the exposure it deserves and make it stand out.
+                                </b>
+                            <h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class = "row" style="padding-bottom:70px !important;padding-top:70px !important;">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom:0px; padding-left: 10px !important;margin: 0px !important;">
+                            <img  src="img/icons/vision1.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                            <center>
+                                <h1 style = "padding-bottom: 0px; width: 106px; display: inline !important; opacity: 0.7 !important;  padding: auto 0px !important;">DroneVision</h1>
+                            </center>
+                        </div>
+                   </div>
+                </center>
+                <div class = "large-7 columns" style="padding:30px !important;">
+                    <div class = "row" style="padding-bottom: 40px !important">
+                      <div class="large-12 columns">
+                        <h1 style="padding-bottom: 20px;padding-top: 20px; text-align: justify">THE GREATEST VIEWS</h1>
+                      </div>
+                      <div class="large-12 columns">
+                            <h3 style="text-align: justify">
+                                <b>
+                                    Get the best perspective of things that matter to you the most.
+                                    With customized drones and top of the line cameras we present you the things in a never seen before form. All with stunning detail.
+                                    Birds eye view is just a drone away.
+                                </b>
+                            <h3>
+                      </div>
+                    </div>
+                </div>
+                <div class="large-5 columns" >
+                    <img src="img/droneVision.png" style="height: 400% !important">
+                </div>
+            </div>
+			<hr>
+            <div class = "row" style="padding-bottom:70px !important;padding-top:70px !important;">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom: 20px; padding-left: 10px !important;margin: 0px !important;">
+                            <img  src="img/icons/photogrammetry1.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                            <center>
+                                <h1 style = "padding-bottom: 0px !important; width: 106px; display: inline !important; opacity: 0.7 !important; padding: auto 0px !important;">Surface Mapping</h1>
+                            </center>
+                        </div>
+                   </div>
+                </center>
+                <div class="large-12 columns" style="padding-bottom: 20px" >
+                  <center>
+                    <img src="img/terrain.png" style="width: 45% !important">
+                  </center>
+                </div>
+                <div class = "large-12 columns">
+                    <div class = "row" style="padding-bottom: 20px">
+                        <div class="large-12 columns">
+                            <h1  style="padding-bottom: 10px !important"><center>GET THE BEST MAP EVER. PERIOD</center></h1>
+                        </div>
+                        <div class="large-12 columns">
+                            <h3><b>
+                              <center>
+                                Get the most accurate topographical data of any terrain with the state of the art photogrammetry techniques.
+                                Analysis and Planning just got a lot simpler.
+                              </center>
+                            </b><h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class = "row" style="padding-bottom:120px !important;padding-top:70px !important;background: url('img/Delivery.jpg') repeat center ;max-width: 100% !important; margin: 0px !important">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom: 40px; padding-left: 10px !important;margin: 0px !important;">
+                                <img  src="img/icons/sDrop.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                                <center>
+                                <h1 style = "padding-bottom: 40px; width: 106px; display: inline !important; opacity: 0.7 !important; padding: auto 0px !important;">Strategic Drop</h1>
+                                </center>
+                        </div>
+                   </div>
+                </center>
+                <div class = "large-7 columns" style="padding:30px !important;">
+                    <div class = "row" style="padding-bottom: 20px">
+                        <div class="large-12 columns">
+                            <h1 style="padding-bottom: 20px">MEET THE DROPBOT</h1>
+                        </div>
+                        <div class="large-12 columns">
+                            <h3><b>
+                                With Skylark<span style="font-family: Arial; font-weight: 100;">'</span>s cutting edge STRAPDROP <span style="font-family: Arial; font-weight: 100;">(</span>Strategic Payload Drop<span style="font-family: Arial; font-weight: 100;">)</span> technology, we make sure you get what you need, wherever you need it, in any localized region.
+                                With on-board intelligence to provide dynamic adaptability, DROPBOTs are more capable than you think.
+                            </b><h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div>
+        <div class="row" style = "padding-top: 30px; padding-bottom: 50px">
+           <div class = "row" style="padding-bottom:0px !important;padding-top:70px !important;">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom: 40px; padding-left: 10px !important;margin: 0px !important;">
+                                <img  src="img/icons/thermal.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                                <center>
+                                <h1 style = "padding-bottom: 40px; width: 106px; display: inline !important; opacity: 0.7 !important; padding: auto 0px !important;">DroneSensing</h1>
+                                </center>
+                        </div>
+                   </div>
+                </center>
+                <div id ="#cell-spot" class="large-12 columns">
+                   <div class="cell-animation-wrapper">
+                    <div class="cell"><div class="cell-inner"></div></div>
+                      <div class="cell-target-circle">
+                        <div class="cell-target-crosshair"></div>
+                        <svg class="svg-circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.5 53.5" enable-background="new 0 0 53.5 53.5" xml:space="preserve">
+                          <path fill="transparent" stroke-width="1" vector-effect="non-scaling-stroke" stroke-miterlimit="10" d="M26.75,1C12.529,1,1,12.529,1,26.75 C1,40.972,12.529,52.5,26.75,52.5c14.222,0,25.75-11.528,25.75-25.75C52.5,12.529,40.972,1,26.75,1"></path>
+                        </svg>
+                      </div>
+                      <div class="cell-target-circle outer">
+                        <svg class="svg-circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.5 53.5" enable-background="new 0 0 53.5 53.5" xml:space="preserve">
+                          <path fill="transparent" stroke-width="1" vector-effect="non-scaling-stroke" stroke-miterlimit="10" d="M26.75,1C12.529,1,1,12.529,1,26.75 C1,40.972,12.529,52.5,26.75,52.5c14.222,0,25.75-11.528,25.75-25.75C52.5,12.529,40.972,1,26.75,1"></path>
+                        </svg>
+                      </div>
+                    </div>
+                </div>
+                <div class = "large-12 columns" style="padding-bottom:30px !important;">
+                    <div class = "row" style="padding-bottom: 20px">
+                        <div class="large-12 columns">
+                            <h1 style="padding-bottom: 20px"><center>DETECT ANYTHING</center></h1>
+                        </div>
+                        <div class="large-12 columns">
+                            <h3><b>
+                              <center>Sense the environment with Skylark<span style="font-family: Arial; font-weight: 100;">'</span>s state of the art sensing and mapping technology.
+                                Sense  high temperature  regions faster and safer.Traverse through foggy or dark environments and trigger alarms in case of fires.
+                                Explore  remote areas containing abundant minerals with the help of a magneto meter. </center>
+                            </b><h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<hr>
+            <div class = "row" style="padding-bottom:70px !important;padding-top:70px !important;">
+                <center>
+                    <div class="row">
+                        <div class="row" style="padding-bottom: 40px; padding-left: 10px !important;margin: 0px !important;">
+                                <img  src="img/icons/quad1.png" style = "width: 106px; display: inline !important; opacity: 0.7 !important">
+                                <center>
+                                <h1 style = "padding-bottom: 40px; width: 106px; display: inline !important; opacity: 0.7 !important; padding: auto 0px !important;">Personalized Services</h1>
+                                </center>
+                        </div>
+                   </div>
+                </center>
+                <div class="large-3 columns">
+                    <center>
+                    <img src="img/custom.png" style="height:400% !important; padding-bottom: 40px !important;">
+                    </center>
+                </div>
+                <div class = "large-8  columns">
+                    <div class = "row" style="padding-bottom: 20px">
+                        <div class="large-12 columns">
+                            <h1 style="padding-bottom: 20px">YOUR COMPLETE AERIAL PARTNER</h1>
+                        </div>
+                        <div class="large-12 columns">
+                            <h3><b>
+                              <b>
+                                  Now even drone can suit your needs. Suggest any innovative service that you think drones can offer you, and we can make it happen.
+                                  Our professional team of engineers and  designers will jump right in and find the most effective way to bring your idea to life.
+                              </b>
+                            </b><h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          </div>
+          <hr>
+      <div id="achievements" style="padding: 0px 100px 100px 100px;">
+		<div class="row" style="padding-bottom: 100px; padding-top: 50px">
+            <center><h2><b>RECOGNISED BY</b></h2></center>
+			<div class="large-6 columns" style="display: inline !important;">
+				<center>
+					<a href="http://www.deccanherald.com/content/416805/young-geeks-develop-drones-social.html" target="_blank"><img src="img/deccan.jpeg" width="202px" style="padding: 30px"></a>
+					<h2><blockquote><b><i><span style="font-family: 'Helvetica'">"</span>innovative, safe and beneficial<span style="font-family: 'Helvetica'">"</span></i></b></blockquote></h2>
+				</center>
+			</div>
+			<div class="large-6 columns" style="display: inline !important;">
+				<center>
+					<a href="http://yourstory.com/2014/10/skylark" target="_blank"><img src="img/yourstory.png" width="252px" style="padding: 30px; padding-top: 40px !important"></a>
+					<h2><blockquote><b><i><span style="font-family: 'Helvetica'">"</span>working on Drones for over six years<span style="font-family: 'Helvetica'">"</span></i></b></blockquote></h2>
+				</center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns" style="display: inline !important;">
+				<center>
+					<img src="img/nasa.jpeg" width="117px">
+					<h3 style="padding: 20px"><b>1st out of 75 Global Teams</b></h3>
+				</center>
+			</div>
+			<div class="large-4 columns" style="display: inline !important;">
+				<center>
+					<img src="img/projectsCom.jpeg" width="102px">
+					<h3 style="padding: 20px"><b>50<span style="font-family: 'Helvetica'">+</span> Completed Projects</b></h3>
+				</center>
+			</div>
+			<div class="large-4 columns" style="display: inline !important;">
+				<center>
+					<img src="img/saeLogo.jpeg" width="172px">
+					<h3 style="padding: 40px"><b>Society of Automative Engineers Certified</b></h3>
+				</center>
+			</div>
+		</div>
+
+	</div>
+    <div id="domains" style="padding: 100px 10px 100px 10px; z-index: -10 !important;background-image:-webkit-gradient(radial, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #ccc));background-image:-webkit-radial-gradient(#fafafa, #ccc);background-image:-moz-radial-gradient(#fafafa, #ccc);background-image:-o-radial-gradient(#fafafa, #ccc);background-image:radial-gradient(#fafafa,#ccc);max-width: 100% !important; margin: 0px !important">
+                <center><h2><b>DOMAINS</b></h2></center>
+                <div class="row" style="">
+                    <ul  style="list-style-type: none !important; ">
+                        <li class = "domainEle">
+                            <ul class="large-3 large-offset-1 small-12 columns" style="list-style-type: none !important;">
+                                <center>
+                                    <a href="realEstate.html" style="text-decoration: none !important;">
+                                    <img src="img/icons/realestate2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">Real Estate</a>
+                                </center>
+                            </ul>
+                        </li>
+
+                        <li class = "domainEle">
+                            <ul class="large-3 small-12 columns" style="list-style-type: none !important;">
+                                <center>
+                                    <a href="survey.html" style="text-decoration: none !important;">
+                                      <img src="img/icons/survey2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">
+                                    Surveying</a>
+                                </center>
+                            </ul>
+                        </li>
+                        <li class = "domainEle">
+                            <ul class="large-3 small-12 columns" style="list-style-type: none !important;">
+                              <center>
+                                	<a href="technicalInspection.html" style="text-decoration: none !important;">
+                                 	<img src="img/icons/inspection2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">Technical Inspection</a>
+                              </center>
+                            </ul>
+                        </li>
+                    </ul>
+                        <div class="row">
+                            <ul style="list-style-type: none">
+                            <li class = "domainEle">
+                            <ul class="large-3 large-offset-1  small-12 columns" style="list-style-type: none !important;">
+                              <center>
+                                        <a href="resexplor.html" style="text-decoration: none !important;">
+                                          <img src="img/icons/drop2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">
+                                        Resource Exploration</a>
+                                    </center>
+                            </ul>
+                        </li>
+                        <li class = "domainEle">
+                            <ul class="large-3 small-12 columns" style="list-style-type: none !important;">
+                              <center>
+                                        <a href="droneAds.html" style="text-decoration: none !important;">
+                                          <img src="img/icons/ads2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">
+                                        Advertising</a>
+                                    </center>
+                            </ul>
+                        </li>
+                        <li class = "domainEle">
+                            <ul class="large-3 small-12 columns" style="list-style-type: none !important;">
+                              <center>
+                                        <a href="events.html" style="text-decoration: none !important;">
+                                          <img src="img/icons/sports2.png" alt="thumbnail" style="width: 140px !important; display: block !important; padding-bottom: 20px;">
+                                        Events/Sports</a>
+                                    </center>
+                            </ul>
+                        </li>
+                    </ul>
+                        </div>
+
+                </div> <!-- cd-gallery-container -->
+            </div>
+
+
+        <div id="contact" style="padding: 40px 100px 0px 100px;">
+            <center style="padding: 50px 50px 50px 50px;"><h2><b>CONTACT US</b></h2></center>
+                <div class="row">
+                    <div class="large-6 small-12 columns contact-skylark">
+                        <div>
+                            <center>
+                                <img src="img/logo1.png" id="contact-logo">
+                                <h1>Skylark Drones</h1>
+                                <h2>Bangalore, India</h2>
+                                <h3><a class="ease-all" href="mailto:info@skylarkdrones.com" target = "_blank"><i class="fa fa-envelope-o"></i>info@skylarkdrones.com</a>
+                                </h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="large-6 small-12 end columns contact-people">
+                        <div class="row founder">
+                                <div class="large-4 columns">
+                                <img src="img/mrinal.png" class="avatar">
+                                </div>
+                                <div class="large-8 columns">
+                                    <h2>Mrinal Pai</h2>
+                                    <h3>Cofounder and Chief Pilot</h3>
+                                    <ul class="person-social">
+                                        <li><a class="ease-all" href="https://www.facebook.com/mrinal.pai" target = "_blank"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a></li>
+                                        <li><a class="ease-all" href="http://in.linkedin.com/in/mrinalpai" target = "_blank"><i class="fa fa-linkedin-square"></i><span class="hide-text">LinkedIn</span></a></li>
+                                    </ul>
+                                    <h2>8971911599</h2>
+                                </div>
+
+                        </div>
+                        <div class="row founder">
+                                <div class="large-4 columns">
+                                <img src="img/mughilan.jpg" class="avatar">
+                                </div>
+                                <div class="large-8 columns">
+                                    <h2>Mughilan T R</h2>
+                                    <h3>Cofounder and Chief Designer</h3>
+                                    <ul class="person-social">
+                                        <li><a class="ease-all" href="https://www.facebook.com/mughilan.thiruramasamy" target = "_blank"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a></li>
+                                        <li><a class="ease-all" href="http://www.linkedin.com/in/trmughilan" target = "_blank"><i class="fa fa-linkedin-square"></i><span class="hide-text">LinkedIn</span></a></li>
+                                    </ul>
+                                    <h2>9740331193</h2>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            <div class="container">
+                <section>
+                <div class="morph-button morph-button-overlay morph-button-fixed">
+                    <button type="button">LEAVE A MESSAGE</button>
+                    <div class="morph-content">
+                        <div>
+                            <div class="content-style-overlay">
+                                <span class="icon icon-close">Close the overlay</span>
+                                <h2>Contact</h2>
+                    <form name="feedbackForm" id="feedback" method="POST" action="http://www.skylarkdrones.com/formSub.php">
+                    <h2 style="color: white">We will get back to you...</h2>
+
+
+
+
+                    <div class="notification"></div>
+                    <input type="hidden" name="action" id="action" value="feedback">
+                    <ul class="list-inline grid">
+                        <li>
+                            <input name="feedbackFormName" id="feedbackFormName" type="text" class="form-control" placeholder="Name" data-validator="required|alpha_numeric">
+                        </li>
+                        <li>
+                            <input name="feedbackFormEmail" id="feedbackFormEmail" type="text" class="form-control" placeholder="Email" data-validator="required|valid_email">
+                        </li>
+                        <li>
+                            <textarea name="feedbackFormComment" id="feedbackFormComment" class="form-control" placeholder="Comment" columns="4" data-validator="required"></textarea>
+                        </li>
+                    </ul>
+                    <input type="submit" class="morph-button" style="padding: 40px;
+    background-color: #e85657;
+    color: #f9f6e5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 80px;
+    overflow: hidden;">
+                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- morph-button -->
+            </section>
+        </div><!-- /container -->
+
+        <script src="js/classie.js"></script>
+        <script src="js/uiMorphingButton_fixed.js"></script>
+        <script>
+            (function() {
+                var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+                // trick to prevent scrolling when opening/closing button
+                function noScrollFn() {
+                    window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+                }
+
+                function noScroll() {
+                    window.removeEventListener( 'scroll', scrollHandler );
+                    window.addEventListener( 'scroll', noScrollFn );
+                }
+
+                function scrollFn() {
+                    window.addEventListener( 'scroll', scrollHandler );
+                }
+
+                function canScroll() {
+                    window.removeEventListener( 'scroll', noScrollFn );
+                    scrollFn();
+                }
+
+                function scrollHandler() {
+                    if( !didScroll ) {
+                        didScroll = true;
+                        setTimeout( function() { scrollPage(); }, 60 );
+                    }
+                };
+
+                function scrollPage() {
+                    scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+                    didScroll = false;
+                };
+
+                scrollFn();
+
+                var el = document.querySelector( '.morph-button' );
+
+                new UIMorphingButton( el, {
+                    closeEl : '.icon-close',
+                    onBeforeOpen : function() {
+                        // don't allow to scroll
+                        noScroll();
+                    },
+                    onAfterOpen : function() {
+                        // can scroll again
+                        canScroll();
+                        // add class "noscroll" to body
+                        classie.addClass( document.body, 'noscroll' );
+                        // add scroll class to main el
+                        classie.addClass( el, 'scroll' );
+                    },
+                    onBeforeClose : function() {
+                        // remove class "noscroll" to body
+                        classie.removeClass( document.body, 'noscroll' );
+                        // remove scroll class from main el
+                        classie.removeClass( el, 'scroll' );
+                        // don't allow to scroll
+                        noScroll();
+                    },
+                    onAfterClose : function() {
+                        // can scroll again
+                        canScroll();
+                    }
+                } );
+            })();
+        </script>
+        </div>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
+        <script type="text/javascript" src="js/jquery.panorama_viewer.js"></script>
+        <script src="js/nav_bar.js"></script> <!-- Resource jQuery -->
+        <script src="js/contact.js"></script> <!-- Resource jQuery -->
+        <script src="js/cellSpot.js"></script> <!-- Resource jQuery -->
+     <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52190633-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        <script src="js/banner3.js" type="text/javascript"></script> <!-- Resource jQuery -->
+        <script src="js/intro.js" type="text/javascript"></script> <!-- Resource jQuery -->
+        <script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+              window.parent.postMessage('resize', "*");
+            }
+        </script>
+
+        <script>
+            var speed = 900;
+            var container =  $('#demo');
+            container.each(function() {
+              var elements = $(this).children('div');
+              elements.each(function() {
+                var elementOffset = $(this).offset();
+                var offset = elementOffset.left + elementOffset.top;
+                var delay = parseFloat(offset/speed).toFixed(2);
+                $(this)
+                  .attr("style","animation-delay:"+delay+"s");
+              });
+            });
+
+
+        </script>
+
+    </body>
+</html>

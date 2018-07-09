@@ -1,0 +1,122 @@
+ <div ng-controller="loginCtrl">
+
+<div  ng-hide="isRegister">
+    <form method="post" novalidate="true" ng-submit="login(loginForm.$valid)" name="loginForm">
+        <p>
+          <input 
+            type="email" 
+            required
+            name="email" 
+            ng-model="data.email" 
+            value="" id="email" 
+            placeholder="Email"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            >
+        </p>
+
+        <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$touched && loginForm.email.$invalid">
+          <p ng-message="minlength">Email should be 5 char.</p>
+          <p ng-message="maxlength">Email should be less thatn 10 char.</p>
+          <p ng-message="required">Email is required.</p>
+          <p ng-message="email">Please enter valid email.</p>
+        </div>
+        <p>
+          <input 
+            type="password" 
+            name="password"  
+            ng-model="data.password"  
+            value="" 
+            id="password" 
+            placeholder="Password"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            >
+          </p>
+         <div ng-messages="loginForm.password.$error" ng-show="loginForm.password.$touched && loginForm.password.$invalid">
+          <p ng-message="minlength">Password should be 5 char.</p>
+          <p ng-message="maxlength">Password should be less thatn 10 char.</p>
+          <p ng-message="required">Password is required.</p>
+        </div> 
+        <p class="submit"><input type="submit" value="Login"></p>
+
+       <a href="/auth/facebook">Login with Facebook</a>
+       <a href="/auth/google">Login with Google</a>
+      <!--   <a href="/auth/linkedin">Login with LinkedIn</a> -->
+        <a href="#" ng-click="showRegister()">Signup</a>
+</form></div>
+
+
+<div ng-show="isRegister">
+  <form novalidate="" ng-submit="doRegister(registerForm.$valid)" name="registerForm">
+
+  <p>
+
+      <input 
+            type="text" 
+            required
+            name="name" 
+            ng-model="register.name" 
+            value="" id="name" 
+            placeholder="Name"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            />
+        </p>
+
+        <div ng-messages="registerForm.name.$error" ng-show="registerForm.name.$touched && registerForm.name.$invalid">
+          <p ng-message="minlength">Name should be 5 char.</p>
+          <p ng-message="maxlength">Name should be less thatn 10 char.</p>
+          <p ng-message="required">Name is required.</p>
+        </div>
+
+
+
+      <p>
+
+      <input 
+            type="email" 
+            required
+            name="email" 
+            ng-model="register.email" 
+            value="" id="email" 
+            placeholder="Email"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            />
+        </p>
+
+        <div ng-messages="registerForm.email.$error" ng-show="registerForm.email.$touched && registerForm.email.$invalid">
+          <p ng-message="minlength">Email should be 5 char.</p>
+          <p ng-message="maxlength">Email should be less thatn 10 char.</p>
+          <p ng-message="required">Email is required.</p>
+          <p ng-message="email">Please enter valid email.</p>
+        </div>
+        <p>
+          <input 
+            type="password" 
+            name="password"  
+            ng-model="register.password"  
+            value="" 
+            id="password" 
+            placeholder="Password"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            />
+          </p>
+         <div ng-messages="registerForm.password.$error" ng-show="registerForm.password.$touched && registerForm.password.$invalid">
+          <p ng-message="minlength">Password should be 5 char.</p>
+          <p ng-message="maxlength">Password should be less thatn 10 char.</p>
+          <p ng-message="required">Password is required.</p>
+        </div> 
+
+        <p class="submit"><input type="submit" value="Register"></p>
+
+        </form>
+ <a  href="#"  ng-click="showLogin()">Back</a>
+</div>
+
+
+
+
+</div>

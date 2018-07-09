@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Operational Task List</title>
+</head>
+<body>
+<center>
+    <h2>Flight Check</h2>
+</center>
+<br>
+<br>
+
+<form class="form-inline">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Tail Number</label>
+                <div class="col-md-4">
+                    <select id="tailno" name="tailno" class="form-control">
+                        <option value="1">Option one</option>
+                        <option value="2">Option two</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Flight Engg.</label>
+                <div class="col-md-4">
+                    <select id="fe" name="fe" class="form-control">
+                        <option value="1">Option one</option>
+                        <option value="2">Option two</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Flight Planner</label>
+                <div class="col-md-4">
+                    <select id="fp" name="fp" class="form-control">
+                        <option value="1">Option one</option>
+                        <option value="2">Option two</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-4 control-label" >Sensor</label>
+                <div class="col-md-4">
+                    <select id="sensor" name="sensor" class="form-control">
+                        <option value="1">Option one</option>
+                        <option value="2">Option two</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+
+      <div class="row">
+
+         <div class="col-md-4">
+
+        <input type="button" class="btn-primary" onclick="window.location.href='allsysgo.html';" style="width: 100%">All-Systems Go</input>
+
+         </div>
+          <div class="col-md-4">
+
+                  <input type="button" class="btn-success" onclick="location.href='airframe.html';" style="width: 100%">D-Day</input>
+              </div>
+          <div class="col-md-4">
+
+                  <button class="btn-danger" onclick="location.href='logbook.html';" style="width: 100%">Log-Book</button>
+
+          </div>
+      </div>
+
+    </div>
+</form>
+
+
+</body>
+</html>

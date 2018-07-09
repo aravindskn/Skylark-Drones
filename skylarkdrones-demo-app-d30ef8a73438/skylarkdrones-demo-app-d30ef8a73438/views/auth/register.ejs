@@ -1,0 +1,33 @@
+<h1>Register</h1>
+<form method="post" action="/register">
+ <% if (typeof data !== 'undefined') {
+ console.log(data['msg'])
+  var msg = data.errors;
+  %>
+
+        <p><input type="email" name="email" value="<%= msg.email.value %>" placeholder="Email"> </p>
+          <% if (msg.email) {%>
+          <span style="color:red"><%= msg.email.msg %></span>
+          <% } %>
+       
+        <p><input type="email" name="password" value="" placeholder="Password"></p>
+          <% if (msg.password) {%>
+          <span style="color:red"><%= msg.password.msg %></span>
+          <% } %>
+        <p><input type="email" name="name" value="<%= msg.name.value %>" placeholder="Name"></p>
+          <% if (msg.name) {%>
+          <span style="color:red"><%= msg.name.msg %></span>
+          <% } %>
+         
+   
+        <% } else { %>
+
+        <p><input type="email" name="email" value="" placeholder="Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p><input type="text" name="name" value="" placeholder="Name"></p>
+
+ <% } %>
+
+        <p class="submit"><input type="submit" value="Login"></p>
+</form>
+

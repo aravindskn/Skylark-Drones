@@ -1,0 +1,1 @@
+node --debug app.js --watch api --watch config

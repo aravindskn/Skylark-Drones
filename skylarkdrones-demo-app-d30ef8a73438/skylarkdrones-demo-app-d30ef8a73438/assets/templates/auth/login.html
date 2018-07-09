@@ -1,0 +1,44 @@
+ <div ng-controller="loginCtrl">
+    <form method="post" action="/login?next=project" ng-submit="validate($event)" name="loginForm">
+        <p>
+          <input 
+            type="email" 
+            required
+            name="email" 
+            ng-model="data.email" 
+            value="" id="email" 
+            placeholder="Email"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            >
+        </p>
+
+        <div ng-messages="loginForm.email.$error" ng-show="loginForm.email.$touched && loginForm.email.$invalid">
+          <p ng-message="minlength">Email should be 5 char.</p>
+          <p ng-message="maxlength">Email should be less thatn 10 char.</p>
+          <p ng-message="required">Email is required.</p>
+          <p ng-message="email">Please enter valid email.</p>
+        </div>
+        <p>
+          <input 
+            type="password" 
+            name="password"  
+            ng-model="data.password"  
+            value="" 
+            id="password" 
+            placeholder="Password"
+            ng-minlength="5" 
+            ng-maxlength="100"
+            >
+          </p>
+         <div ng-messages="loginForm.password.$error" ng-show="loginForm.password.$touched && loginForm.password.$invalid">
+          <p ng-message="minlength">Password should be 5 char.</p>
+          <p ng-message="maxlength">Password should be less thatn 10 char.</p>
+          <p ng-message="required">Password is required.</p>
+        </div> 
+        <p class="submit"><input type="submit" value="Login" ng-disabled="loginForm.$invalid"></p>
+
+       <a href="/auth/facebook">Login with Facebook</a>
+       <a href="/auth/linkedin">Login with LinkedIn</a>
+       <a href="/register">Signup</a>
+</form></div>

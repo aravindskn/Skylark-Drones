@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <title>Flight Check</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Operational Task List</title>
+</head>
+<body onload="duh()" onloadeddata="populate()">
+<center>
+    <h2>Flight Check</h2>
+    <br><br>
+    <label class="col-md-4 control-label" for="projname">Project Name</label>
+    <div class="col-md-4">
+        <input id="projname" name="projname" type="text" placeholder="" class="form-control input-md" required="">
+    </div>
+    <div class="col-md-4">
+        <input type="submit" class="btn btn-danger" onclick="deleteData()" value="clear all data">
+        <input type="submit" class="btn btn-primary" onclick="onComp()" value="save data">
+    </div>
+</center>
+<br>
+<br>
+​
+<form class="form-inline">
+    <div class="container-fluid">
+        ​<div class="row">
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" >Tail Number</label>
+            <div class="col-md-4">
+                <select id="tailno" name="tailno" class="form-control" required="">
+                    <option value="1">S201TA</option>
+                    <option value="2">S211TA</option>
+                    <option value="3">S212TA</option>
+                    <option value="4">S213TA</option>
+                    <option value="5">S201SH</option>
+                </select>
+            </div>
+        </div>
+        ​
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" >Flight Engg.</label>
+            <div class="col-md-4">
+                <input type="text" id="fe" name="fe" class="form-control" required="">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" >Flight Planner</label>
+            <div class="col-md-4">
+                <input id="fp" type="text" name="fp" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="col-md-4 control-label" >Sensor</label>
+            <div class="col-md-4">
+                <select id="sensor" name="sensor" class="form-control">
+                    <option value="1">Canon SX230HS</option>
+                    <option value="2">Canon A220</option>
+                    <option value="3">Sony A S100</option>
+                </select>
+            </div>
+        </div>
+    </div>
+        ​
+        <br>
+        <br>
+        ​
+        ​<div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='airframe.html'" style="width: 100%" value="D-Day">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href=''" style="width: 100%" value="Log-Book">
+        </div>
+
+    </div>
+
+        ​
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <label class="col-md-4 control-label" for="date">Date:</label>
+            <div class="col-md-4">
+                <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+                <script>
+                    var d = new Date();
+                    document.getElementById("date").value = d.toDateString();
+                </script>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="col-md-4 control-label" for="time">Time:</label>
+            <div class="col-md-4">
+                <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+                <script >
+                    var d = new Date(); // for now
+                    document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+                </script>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Button -->
+    <div class="row">
+
+        <div class="col-md-12">
+            <input type="button" class="btn btn-primary" onclick="window.print(), location.href='allsysgo.html'"
+                   style="width: 100%" value="Submit">
+        </div>
+
+    </div>
+</form>
+​<script>
+    function onComp(){
+        var projName = document.getElementById("projname").value;
+        localStorage.setItem("projname", projName);
+        var tailNo = document.getElementById("tailno");
+        var tailNoChoice = tailNo.options[tailNo.selectedIndex].text;
+        localStorage.setItem("tailno", tailNoChoice);
+        var flightEngg = document.getElementById("fe").value;
+        localStorage.setItem("fe", flightEngg);
+        var flightPlanner = document.getElementById("fp").value;
+        localStorage.setItem("fp", flightPlanner);
+        var sensor = document.getElementById("sensor");
+        var sensorChoice = sensor.options[sensor.selectedIndex].text;
+        localStorage.setItem("sensor", sensorChoice);
+        localStorage.setItem("120000", "LP01TA");
+        localStorage.setItem("120001", "LP02TA");
+        localStorage.setItem("120002", "LP03TA");
+        localStorage.setItem("120003", "LP04TA");
+        localStorage.setItem("120004", "LP05TA");
+        localStorage.setItem("120005", "LP06TA");
+        localStorage.setItem("120006", "LP07TA");
+        localStorage.setItem("120007", "LP08TA");
+        localStorage.setItem("120008", "LP09TA");
+        window.alert("Data saved");
+
+    }
+</script>
+
+<script>
+    function deleteData(){
+        var del = confirm("Do you want to clear all data?");
+        if(del == true) {
+            localStorage.clear();
+            window.location.reload();
+        }
+    }
+</script>
+
+<script>
+    function duh() {
+        function setSelectedIndex(s, v) {
+            for (var i = 0; i < s.options.length; i++) {
+
+                if (s.options[i].text == v) {
+
+                    s.options[i].selected = true;
+
+                    return;
+
+                }
+
+            }
+        }
+        document.getElementById("projname").value = localStorage.getItem("projname");
+        setSelectedIndex(document.getElementById("tailno"),localStorage.getItem("tailno"));
+        document.getElementById("fe").value = localStorage.getItem("fe");
+        document.getElementById("fp").value = localStorage.getItem("fp");
+        setSelectedIndex(document.getElementById("sensor"),localStorage.getItem("sensor"));
+    }
+</script>
+
+
+</body>
+</html>

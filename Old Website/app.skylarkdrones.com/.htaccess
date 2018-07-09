@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^app\.skylarkdrones\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.app\.skylarkdrones\.com$
+RewriteRule ^/?$ "http\:\/\/52\.34\.49\.124" [R=301,L]
+

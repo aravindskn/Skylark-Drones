@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D-day Checklist</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+</head>
+<body onload="duh()">
+<center>
+    <h2>D-day Checklist</h2>
+    <hr>
+</center>
+<header>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='index.html'" style="width: 100%" value="Home">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href='log_book.html'" style="width: 100%" value="Log-Book">
+        </div>
+    </div>
+</header>
+<form class="form form-inline" action="log_book.html" onsubmit="return checkForm(this);">
+    <div class="container-fluid">
+        ​<div class="row">
+        <div class="col-md-8">
+            <label class="col-md-4 control-label" for="pname">Project Name:</label>
+            <div class="col-md-4">
+                <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="sensor">Sensor:</label>
+            <div class="col-md-4">
+                <input id="sensor" name="sensor" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+    </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="tailno">Tail Number:</label>
+                <div class="col-md-4">
+                    <input id="tailno" name="tailno" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+                <div class="col-md-4">
+                    <input id="fengg" name="fengg" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+                <div class="col-md-4">
+                    <input id="fplan" name="fplan" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+        </div><br>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary1" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary1" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary1" class="[ btn btn-default active ]">
+                    Airframe Checklist
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary2" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary2" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary2" class="[ btn btn-default active ]">
+                    Tool Box Checklist
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary3" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary3" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary3" class="[ btn btn-default active ]">
+                    Drone Battery Charged
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary4" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary4" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary4" class="[ btn btn-default active ]">
+                    Taranis Battery Charged
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary5" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary5" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary5" class="[ btn btn-default active ]">
+                    Mission Planer WP file (or Polygon file)
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary6" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary6" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary6" class="[ btn btn-default active ]">
+                    Camera Box
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary7" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary7" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary7" class="[ btn btn-default active ]">
+                    Tickets, Contact details & Accommodation
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary8" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary8" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary8" class="[ btn btn-default active ]">
+                    Sunscreen and mosquito repellent
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary9" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary9" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary9" class="[ btn btn-default active ]">
+                    Phanthom 3
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary11" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary11" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary11" class="[ btn btn-default active ]">
+                    Allowances
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="[ form-group ]">
+            <input type="checkbox" name="fancy-checkbox-primary" id="fancy-checkbox-primary12" autocomplete="off" />
+            <div class="[ btn-group ]">
+                <label for="fancy-checkbox-primary12" class="[ btn btn-primary ]">
+                    <span class="[ glyphicon glyphicon-ok ]"></span>
+                    <span> </span>
+                </label>
+                <label for="fancy-checkbox-primary12" class="[ btn btn-default active ]">
+                    Dongle (3G/4G)
+                </label>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+
+            <div class="col-md-18">
+                <input type="submit" id="submit" value="Submit" name="submit" onclick="window.print()"
+                        class="btn btn-primary">
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+</form>
+
+<br>
+<script>
+    function duh() {
+        document.getElementById("pname").value = localStorage.getItem("projname");
+        document.getElementById("tailno").value = localStorage.getItem("tailno");
+        document.getElementById("fengg").value = localStorage.getItem("fe");
+        document.getElementById("fplan").value = localStorage.getItem("fp");
+        document.getElementById("sensor").value = localStorage.getItem("sensor");
+
+    }
+</script>
+
+</body>
+</html>

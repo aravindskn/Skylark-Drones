@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Toolkit</title>
+</head>
+
+<body onload="duh()">
+<header>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-success"
+                   onclick="location.href='allsysgo.html'"
+                   style="width: 100%" value="All-Systems-Go">
+
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" onclick="location.href='index.html'" style="width: 100%" value="Home">
+        </div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-danger" onclick="location.href='log_book.html'" style="width: 100%" value="Log-Book">
+        </div>
+    </div>
+</header>
+<form class="form-horizontal" onsubmit="return checkForm(this);" action="dday.html">
+    <center>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="col-md-4 control-label" for="pname">Project Name:</label>
+                <div class="col-md-4">
+                    <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="col-md-4 control-label" for="sensor">Sensor:</label>
+                <div class="col-md-4">
+                    <input id="sensor" name="sensor" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="tailno">Tail Number:</label>
+                <div class="col-md-4">
+                    <input id="tailno" name="tailno" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+                <div class="col-md-4">
+                    <input id="fengg" name="fengg" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+                <div class="col-md-4">
+                    <input id="fplan" name="fplan" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+
+        <h2>ToolKit For Flying CheckList</h2>
+
+
+    </center>
+
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label class="col-md-4 control-label" for="date">Date:</label>
+            <div class="col-md-4">
+                <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+                <script>
+                    var d = new Date();
+                    document.getElementById("date").value = d.toDateString();
+                </script>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label class="col-md-4 control-label" for="time">Time:</label>
+            <div class="col-md-4">
+                <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+                <script >
+                    var d = new Date(); // for now
+                    document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+                </script>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <center>
+        <!-- Form Name -->
+        <legend>Pay Load Pouch</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camera">Camera</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="camera" name="camera" class="form-control" type="text" placeholder="Qty" checked="checked">
+                    <span class="input-group-addon">
+                       <input type="checkbox">
+                    </span>
+	            </div>
+
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="sdcard">SD Card</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="sdcard" name="sdcard" class="form-control" type="text" placeholder="Qty" checked="checked">
+                    <span class="input-group-addon">
+                          <input type="checkbox">
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="sdcardread">SD Card Reader</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="sdcardread" name="sdcardread" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                     <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camspabat">Camera Spare Battries</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="camspabat" name="camspabat" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="camchg">Camera Charger</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="camchg" name="camchg" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <legend>Power Unit Set</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="charger">Charger</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="charger" name="charger" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="belkin">Belkin</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="belkin" name="belkin" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txchg">Tx Charger Plug</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="txchg" name="txchg" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <legend>Ground Equipment Set</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="laptop">Laptop</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="laptop" name="laptop" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="anemometer">Anemometer</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="anemometer" name="anemometer" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="multimeter">Multi Meter</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="multimeter" name="multimeter" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <legend>Spares</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="propeller">Propeller</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="propeller" name="propeller" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="servos">Servos</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="servos" name="servos" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="servoarm">Servo Arm</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="servoarm" name="servoarm" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="controlhorn">Control Horn</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="controlhorn" name="controlhorn" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <legend>Tools</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="noseplier">Nose Plier</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="noseplier" name="noseplier" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="exacto">X-ACTO</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="exacto" name="exacto" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="files">Files (FLAT)</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="files" name="files" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="scissors">Scissors (Medium)</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="scissors" name="scissors" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="minisaw">Mini Saw</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="minisaw" name="minisaw" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="allen">Allen Drive & Key Set</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="allen" name="allen" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="chinese">Chinese Screw Driver Set</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="chinese" name="chinese" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cutplier">Cutting Plier</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="cutplier" name="cutplier" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="precision">Precision Screw Drivers (Set)</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="precision" name="precision" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cutters">Cutters</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="cutters" name="cutters" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="blades">Blades</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="blades" name="blades" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="knife">Small Knife</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="knife" name="knife" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="batchk">Battery Checker</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="batchk" name="batchk" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+
+        <legend>Adhesives & Tapes</legend>
+
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="stretchfilm">Stretch Film</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="stretchfilm" name="strtchfilm" class="form-control" type="text" placeholder="Qty" required="">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="doubletape">Double Sided Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="doubletape" name="doubletape" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="3mtape">3M Vibration Damping Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="3mtape" name="3mtape" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="paptape">Paper Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="paptape" name="paptape" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="rubber">Rubber Solution</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="rubber" name="rubber" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="insulation">Insulation Tape Black</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="insulation" name="insulation" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="zipties">Zip Ties</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="zipties" name="zipties" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="velcro">Velcro Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="velcro" name="velcro" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ducttape">Duct Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="ducttape" name="ducttape" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="fibre">Fibre Tape</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="fibre" name="fibre" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="cyno">Cyno (SuperGlue)</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="cyno" name="cyno" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- Appended checkbox -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="klear">Araldite Klear</label>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="klear" name="klear" class="form-control" type="text" placeholder="Qty" required="">
+	        <span class="input-group-addon">
+          <input type="checkbox">
+      </span>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Button -->
+
+    </center>
+    <div class="form-group">
+
+        <div class="col-md-18">
+            <input type="submit" class="btn btn-primary" onclick="window.print(), location.href='dday.html'"
+                   style="width: 100%" value="Submit">
+        </div>
+    </div>
+
+</form>
+<script>
+    function duh() {
+        document.getElementById("pname").value = localStorage.getItem("projname");
+        document.getElementById("tailno").value = localStorage.getItem("tailno");
+        document.getElementById("fengg").value = localStorage.getItem("fe");
+        document.getElementById("fplan").value = localStorage.getItem("fp");
+        document.getElementById("sensor").value = localStorage.getItem("sensor");
+
+    }
+</script>
+<script>
+    function generator() {
+
+        if (localStorage.getItem("120000")!=="LP01TAb") {
+
+        }
+        if (localStorage.getItem("120001")!=="LP02TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check1" name="check1"><label for="check1">' + localStorage.getItem("120001") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120002")!=="LP03TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check2" name="check2"><label for="check2">' + localStorage.getItem("120002") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120003")!=="LP04TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check3" name="check3"><label for="check3">' + localStorage.getItem("120003") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120004")!=="LP05TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check4" name="check4"><label for="check4">' + localStorage.getItem("120004") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120005")!=="LP06TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check5" name="check5"><label for="check5">' + localStorage.getItem("120005") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120006")!=="LP07TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check6" name="check6"><label for="check6">' + localStorage.getItem("120006") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120007")!=="LP08TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check7" name="check7"><label for="check7">' + localStorage.getItem("120007") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+        if (localStorage.getItem("120008")!=="LP09TAb") {
+            var node = document.createElement('div');
+            node.innerHTML = '<input type="checkbox" id="check8" name="check8"><label for="check8">' + localStorage.getItem("120008") + '</label>';
+            document.getElementById('batteries').appendChild(node);
+        }
+    }
+
+</script>
+<script>
+    function help(){
+        if(document.getElementById("120000").checked == true){
+            localStorage.setItem("120000", "LP01TAb");
+        }
+
+        if(document.getElementById("120001").checked == true){
+            localStorage.setItem("120001", "LP02TAb");
+        }
+
+        if(document.getElementById("120002").checked == true){
+            localStorage.setItem("120002", "LP03TAb");
+        }
+
+        if(document.getElementById("120003").checked == true){
+            localStorage.setItem("120003", "LP04TAb");
+        }
+
+        if(document.getElementById("120004").checked == true){
+            localStorage.setItem("120004", "LP05TAb");
+        }
+
+        if(document.getElementById("120005").checked == true){
+            localStorage.setItem("120005", "LP06TAb");
+        }
+
+        if(document.getElementById("120006").checked == true){
+            localStorage.setItem("120006", "LP07TAb");
+        }
+
+        if(document.getElementById("120007").checked == true){
+            localStorage.setItem("120007", "LP08TAb");
+        }
+
+        if(document.getElementById("120008").checked == true){
+            localStorage.setItem("120008", "LP09TAb");
+        }
+    }
+</script>
+
+</body>
+</html>

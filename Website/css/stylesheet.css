@@ -1,0 +1,294 @@
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    opacity: 0.5;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('./img/vlcsnap-2016-07-01-11h58m50s2.png') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+body, html{
+    height: 100%;
+}
+
+.fullpage{
+    min-height: 100%;
+}
+
+#landingscreen{
+    background-color: yellow;
+}
+
+#scrollscreen1{
+    background-color: orange;
+}
+
+#successstories{
+    background-color: cadetblue;
+}
+
+#scrollscreen2{
+    background-color: greenyellow;
+}
+
+#aboutus{
+    background-color: darkseagreen;
+}
+
+#reachout{
+    background-color: azure;
+}
+
+#footer{
+    background-color: black;
+}
+
+
+body {
+    background-color: #ffffff ;
+    color: #424242 ;
+    margin: 0;
+    font-family: "Lato", "Helvetica", "Helvetica Neue", "Helvetica Neue Light", serif;
+    font-size:14px;
+    line-height:1.428571429;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:normal;line-height:1.1;color:#333}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small{font-weight:normal;line-height:1}
+h1,.h1{font-size:45px;line-height:48px}
+h2,.h2{font-size:36px;line-height:42px}
+h3,.h3{font-size:28px;line-height:36px}
+h4,.h4{font-size:24px;line-height:25px}
+h5,.h5{font-size:20px;line-height:24px}
+h6,.h6{font-size:18px;line-height:24px}
+
+
+.custom-button {
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #000000 ;
+    font-size: 32px;
+    background: orange ;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+#talktous:hover {
+    text-decoration: none;
+}
+
+
+
+/**********************************
+Responsive navbar-brand image CSS
+- Remove navbar-brand padding for firefox bug workaround
+- add 100% height and width auto ... similar to how bootstrap img-responsive class works
+***********************************/
+
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+
+/* EXAMPLE 3
+
+line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
+.example3 .navbar-brand {
+    height: 80px;
+}
+
+.example3 .nav >li >a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.example3 .navbar-toggle {
+    padding: 10px;
+    margin: 25px 15px 25px 0;
+}
+/*Footer Social Network icons*/
+#social-fb {
+     color: #3b5998;
+ }
+#social-tw {
+    color: #00aced;
+}
+#social-ln {
+    color: #007bb6;
+}
+#social-fb:hover {
+    color: #2aabd2;
+}
+#social-tw:hover {
+    color: #2aabd2;
+}
+#social-ln:hover {
+    color: #2aabd2;
+}
+/*CSS for bottom-up icon*/
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#back-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#back-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#back-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+/*css for loading bar*/
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 12px;
+    background: #fff;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background-color: orange;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    -o-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+
+    -webkit-box-shadow: inset -1px 0 #AB0100, inset 0 -1px #AB0100, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+    -moz-box-shadow: inset -1px 0 #AB0100, inset 0 -1px #AB0100, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+    -o-box-shadow: inset -1px 0 #AB0100, inset 0 -1px #AB0100, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+    box-shadow: inset -1px 0 #AB0100, inset 0 -1px #AB0100, inset 0 2px rgba(255, 255, 255, 0.5), inset 0 6px rgba(255, 255, 255, .3);
+}
+
+.pace .pace-activity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: -28px;
+    bottom: 0;
+
+    -webkit-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+    -moz-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+    -o-background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+    background-image: radial-gradient(rgba(255, 255, 255, .65) 0%, rgba(255, 255, 255, .15) 100%);
+
+    -webkit-background-size: 28px 100%;
+    -moz-background-size: 28px 100%;
+    -o-background-size: 28px 100%;
+    background-size: 28px 100%;
+
+    -webkit-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+    -moz-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+    -ms-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+    -o-animation: pace-theme-mac-osx-motion 500ms linear infinite;
+    animation: pace-theme-mac-osx-motion 500ms linear infinite;
+}
+
+@-webkit-keyframes pace-theme-mac-osx-motion {
+    0% { -webkit-transform: none; transform: none; }
+    100% { -webkit-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-moz-keyframes pace-theme-mac-osx-motion {
+    0% { -moz-transform: none; transform: none; }
+    100% { -moz-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-o-keyframes pace-theme-mac-osx-motion {
+    0% { -o-transform: none; transform: none; }
+    100% { -o-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@-ms-keyframes pace-theme-mac-osx-motion {
+    0% { -ms-transform: none; transform: none; }
+    100% { -ms-transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}
+@keyframes pace-theme-mac-osx-motion {
+    0% { transform: none; transform: none; }
+    100% { transform: translate(-28px, 0); transform: translate(-28px, 0); }
+}

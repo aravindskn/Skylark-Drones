@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">
+    <title>Airframe</title>
+</head>
+
+<body>
+
+<form class="form-horizontal">
+  <center>
+    <br>
+    <br>
+    <br>
+  <table>
+    <tr>
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="pno">Project Number:</label>
+        <div class="col-md-4">
+            <input id="pno" name="pno" type="text" placeholder="" class="form-control input-md">
+        </div>
+    </div>
+    </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="tailno">Tail Number:</label>
+            <div class="col-md-4">
+                <input id="tailno" name="tailno" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="fengg">Flight Engg.:</label>
+            <div class="col-md-4">
+                <input id="fengg" name="fengg" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="fplan">Flight Planner:</label>
+            <div class="col-md-4">
+                <input id="fplan" name="fplan" type="text" placeholder="" class="form-control input-md">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <h2>Airframe CheckList</h2>
+
+
+  </center>
+
+  <br>
+  <br>
+
+  <div class="row">
+      <div class="col-md-6">
+          <label class="col-md-4 control-label" for="date">Date:</label>
+          <div class="col-md-4">
+              <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+              <script>
+                  var d = new Date();
+                  document.getElementById("date").value = d.toDateString();
+              </script>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <label class="col-md-4 control-label" for="time">Time:</label>
+          <div class="col-md-4">
+              <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+              <script >
+                  var d = new Date(); // for now
+                  document.getElementById("time").value = d.getHours()+":"+d.getMinutes();
+              </script>
+          </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="wing">Wings(2)</label>
+          <div class="col-md-4">
+                  <input type="checkbox" name="wing" id="wing" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="tails">Tail's(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="tails" id="tails" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="tailp">Tail Pin</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="tailp" id="tailp" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="dome">Dome</label>
+          <div class="col-md-4">
+                  <input type="checkbox" name="dome" id="dome" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="fuselage">Fuselage</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="fuselage" id="fuselage" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="winge">Wing Extension(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="winge" id="winge" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="carbon">Carbon Rods(2)</label>
+          <div class="col-md-4">
+             <input type="checkbox" name="carbon" id="carbon" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="fuselagest">Fuselage Stand</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="fuselagest" id="fuselagest" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="taranis">Tarains(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="taranis" id="taranis" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="taranisb">Taranis Battery</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="taranisb" id="taranisb" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="battery">12000Mah Battery(2)</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="battery" id="battery" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="gear">Landing Gear(2)</label>
+          <div class="col-md-4">
+                  <input type="checkbox" name="gear" id="gear" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="gs">GS RDF</label>
+          <div class="col-md-4">
+              <input type="checkbox" name="gs" id="gs" value="1">
+
+          </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="form-group">
+          <label class="col-md-5 control-label" for="ftdi">FTDI Cables</label>
+          <div class="col-md-4">
+
+                  <input type="checkbox" name="ftdi" id="ftdi" value="1">
+
+          </div>
+      </div>
+
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <!-- Button -->
+      <div class="form-group">
+
+          <div class="col-md-18">
+              <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+  </div>
+  </center>
+
+</form>
+
+</body>
+</html>
